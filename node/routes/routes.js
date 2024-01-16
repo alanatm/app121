@@ -3,9 +3,9 @@ import { createSale, deleteSale, getAllSales, getsale, updateSale } from '../con
 const router = express.Router();
 
 router.get('/', getAllSales);
-router.get('/:dn',getsale);
+router.get('/:id',getsale);
 router.post('/',createSale);
-router.put('/:dn', updateSale);
-router.delete('/dn', deleteSale);
+router.put('/:id', updateSale);
+router.delete('/:id', deleteSale);
 
 export default router;

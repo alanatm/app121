@@ -14,20 +14,21 @@ export const getAllSales= async(req, res)=>{
     }
 }
 
-//mostrar un registro
+//mostrar un registro por id
 export const getsale = async (req,res)=>{
     try {
         const sale = await SalesModel.findAll({
             where:{
-                dn:req.params.dn
+                id:req.params.id
             }
         })
-        res.json (sale)
+        res.json (sale[0])
     } catch (error) {
         res.json ({message: error.message})
     }
 
 }
+
 //Crear un Registro
 export const createSale = async (req, res) =>{
     try {
@@ -44,7 +45,7 @@ export const createSale = async (req, res) =>{
 export const updateSale = async (req, res) =>{
     try {
         await SalesModel.update(req.body,{
-            where: {dn: req.params.dn} //OJO AQUI POR SI NO FUNCIONA
+            where: {id: req.params.id} //OJO AQUI POR SI NO FUNCIONA
         })
         res.json ({
             "message": "¡Registro actualizado correctamente!"
@@ -58,7 +59,7 @@ export const updateSale = async (req, res) =>{
 export const deleteSale = async(req, res) =>{
     try {
          await SalesModel.destroy({
-            where: {dn: req.params.dn}
+            where: {id: req.params.id}
         })
         res.json ({
             "message": "¡Registro eliminado correctamente!"

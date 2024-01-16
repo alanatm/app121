@@ -15,7 +15,7 @@ const SalesModel = db.define('papeleta',{
     apellido_pat_cliente: {type: DataTypes.STRING},
     apellido_mat_cliente: {type: DataTypes.STRING},
     curp: {type: DataTypes.STRING},
-    fen_nac: {type: DataTypes.STRING},
+    fec_nac: {type: DataTypes.STRING},
     tel_contacto:  {type: DataTypes.STRING},
     lugar_nac:  {type: DataTypes.STRING},
     email:  {type: DataTypes.STRING},
