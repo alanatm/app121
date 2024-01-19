@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Select from "react-select";
 
-const URI = "http://localhost:8000/sales/";
+const URI = "http://viaduct.proxy.rlwy.net:28870/sales/";
 
 const CompCreateSale = () => {
   const [recarga_plan, setRecarga] = useState("");
